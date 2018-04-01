@@ -10,6 +10,7 @@ namespace app\ctrl;
 class indexCtrl extends \core\imooc
 {
     public function index(){
+        print_r('12');die;
         header("Content-Type: text/html; charset=UTF-8");
         //调用模型类连接数据库
         $model = new \core\lib\model();
