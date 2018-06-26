@@ -16,12 +16,12 @@ class imooc
       $ctrlClass = $route->ctrl;
       $action    = $route->action;
       $ctrlfile    = APP.'/ctrl/'.$ctrlClass.'Ctrl.php';
-      $ctrlClass  = '\\'.MODULE.'\ctrl\\'.$ctrlClass.'Ctrl';
+      $cltrlClass  = '\\'.MODULE.'\ctrl\\'.$ctrlClass.'Ctrl';
       if(is_file($ctrlfile)){
           include $ctrlfile;
-         $ctrl = new $ctrlClass();
+         $ctrl = new $cltrlClass();
           $ctrl->$action();
-          \core\lib\log::log('ctrl:'.$ctrlClass.'and action:'.$action);
+          \core\lib\log::log('ctrl:'.$ctrlClass.' and action:'.$action);
       }
     }
     static public function load($class){

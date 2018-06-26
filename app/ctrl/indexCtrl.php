@@ -10,20 +10,19 @@ namespace app\ctrl;
 class indexCtrl extends \core\imooc
 {
     public function index(){
-        print_r('12');die;
         header("Content-Type: text/html; charset=UTF-8");
         //调用模型类连接数据库
-        $model = new \core\lib\model();
+/*        $model = new \core\lib\model();
         $sql   = " SELECT * FROM ecs_attribute limit 10 ";
         $ret   = $model->query($sql);
-        print_r($ret->fetchAll());die;
-/*        $temp = \core\lib\conf::get('CTRL','route');
+        print_r($ret->fetchAll());die;*/
+        $temp = \core\lib\conf::get('CTRL','route');
         $temp = \core\lib\conf::get('ACTION','route');
-        $data = 'view is ok';
+        $data = ['姓名1'=>'小明','姓名2'=>'小刚'];
         $title = 'title is ok';
         $this->assgin('data',$data);
         $this->assgin('title',$title);
-        $this->display('index.html');*/
+        $this->display('index.html');
 
     }
 }

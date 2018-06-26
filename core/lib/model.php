@@ -6,15 +6,14 @@
  * Time: 20:44
  */
 namespace core\lib;
+use core\lib\conf;
 class model extends \PDO  //此处用继承父类pdo这样就可以使用里面现成的方法了
 {
     public function __construct()
     {
-        $dsn = 'mysql:host=localhost;dbname=test';
-        $username = 'root';
-        $passwd   = 111111;
+        $database = conf::all('database');
         try{
-            parent::__construct($dsn, $username, $passwd);
+            parent::__construct($database['DSN'], $database['USERNAME'], $database['PASSWD']);
         }catch (\PDOException $e){
             print_r($e->getMessage());
         }

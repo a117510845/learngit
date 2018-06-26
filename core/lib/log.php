@@ -11,7 +11,7 @@ class log
 {
     static $class;
     /**
-     * 1.确定日志存储方式
+     * 1.确定日志存储方式 1文件中2数据库3缓存
      * 2.写日志
      */
     static public function init(){
