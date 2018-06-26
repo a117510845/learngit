@@ -6,6 +6,7 @@
  * 3.启动框架
  *
  */
+
 define('IMOOC',realpath('./')); //当前框架所在的目录
 define('CORE',IMOOC.'/core');   //框架核心文件所在的目录
 define('APP',IMOOC.'/app');     //项目文件所处的目录
