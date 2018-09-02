@@ -15,6 +15,7 @@ define('MODULE','app');
 define('DEBUG',true);           //开启调试模式
 
 include "vendor/autoload.php";
+
 if(DEBUG){
     $whoops = new \Whoops\Run;
     $errorTittle = '框架出错了';
@@ -27,7 +28,6 @@ if(DEBUG){
     ini_set('display_errors','Off');
 }
 
-dump($_SERVER);die;
 
 include CORE.'/imooc.php';
 spl_autoload_register('\core\imooc::load');

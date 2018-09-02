@@ -22,7 +22,7 @@ class route
              *  3.返回对应控制器和方法
              */
         if (isset($_GET['ctrl'],$_GET['action'])) {
-            //index/index
+            //http://www.frame.com/index.php?ctrl=index&action=test
 
             $this->ctrl = $_GET['ctrl'];
             $action     = $_GET['action'];

@@ -21,7 +21,7 @@ class imooc
           include $ctrlfile;
          $ctrl = new $cltrlClass();
           $ctrl->$action();
-          \core\lib\log::log('ctrl:'.$ctrlClass.' and action:'.$action);
+          //\core\lib\log::log('ctrl:'.$ctrlClass.' and action:'.$action);
       }
     }
     static public function load($class){
@@ -46,8 +46,13 @@ class imooc
     public function display($file){
       $file = APP.'/views/'.$file;
       if(is_file($file)){
-          extract($this->assgin);
-          include $file;
+          $loader = new \Twig_Loader_Filesystem(APP.'/views');
+          $twig = new \Twig_Environment($loader, array(
+              'cache' => IMOOC.'/log/twig',
+              'debug' => DEBUG,
+          ));
+          $template = $twig->load('index.html');
+          $template->display($this->assgin?$this->assgin:'');
       }
     }
 }

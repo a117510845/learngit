@@ -1,0 +1,6 @@
+2018-05-06 18:06:35"test"
+2018-05-06 18:07:12"ctrl:\\app\\ctrl\\indexCtrland action:index"
+2018-05-06 18:09:21"ctrl:\\app\\ctrl\\indexCtrland action:index"
+2018-05-06 18:09:35"ctrl:\\app\\ctrl\\indexCtrland action:index"
+2018-05-06 18:13:01"ctrl:index and action:index"
+2018-05-06 18:15:51"ctrl:index and action:index"

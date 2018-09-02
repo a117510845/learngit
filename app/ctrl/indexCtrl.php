@@ -7,22 +7,26 @@
  */
 namespace app\ctrl;
 
+use core\lib\model;
+
 class indexCtrl extends \core\imooc
 {
-    public function index(){
-        header("Content-Type: text/html; charset=UTF-8");
-        //调用模型类连接数据库
-/*        $model = new \core\lib\model();
-        $sql   = " SELECT * FROM ecs_attribute limit 10 ";
-        $ret   = $model->query($sql);
-        print_r($ret->fetchAll());die;*/
-        $temp = \core\lib\conf::get('CTRL','route');
-        $temp = \core\lib\conf::get('ACTION','route');
-        $data = ['姓名1'=>'小明','姓名2'=>'小刚'];
-        $title = 'title is ok';
+    public function index()
+    {
+        $data = 'Hello world';
+
         $this->assgin('data',$data);
-        $this->assgin('title',$title);
+
         $this->display('index.html');
 
+    }
+
+    public function test()
+    {
+        $data = 'TEST';
+
+        $this->assgin('data',$data);
+
+        $this->display('test.html');
     }
 }
